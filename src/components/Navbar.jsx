@@ -1,6 +1,6 @@
-import React, { useState } from "react"; // បន្ថែម useState
-import logo from "../assets/images/logo.png";
-import { Menu, X } from "lucide-react"; // បន្ថែម X icon សម្រាប់បិទ menu
+import React, { useState } from "react"; 
+import logo from "../assets/images/logo3.png";
+import { Menu, X } from "lucide-react"; 
 import { Link, NavLink } from "react-router-dom";
 
 const links = [
@@ -12,21 +12,23 @@ const links = [
 ];
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State សម្រាប់គ្រប់គ្រង menu mobile
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // use for managing mobile menu state
 
   return (
-    <div className="flex justify-between items-center bg-gray-800 text-white p-4 relative z-10"> {/* បន្ថែម relative z-10 */}
+    <div className="flex justify-between items-center bg-gray-800 text-white  relative z-10"> 
       <Link to="/">
-        <img src={logo} alt="logo" className="w-20 h-20 my-4" />
+        <img src={logo} alt="logo" className=" md:w-15 md:h-15  w-10 h-10 my-4" />
       </Link>
 
       {/* Button សម្រាប់ Mobile Menu */}
       <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="cursor-pointer lg:hidden focus:outline-none" // បន្ថែម focus:outline-none
+        onClick={() => setIsMenuOpen(!isMenuOpen)} 
+        // ប្រើសម្រាប់ toggle menu​ បើក​ (true = !isMenuOpen) និងបិទ (false = isMenuOpen)
+        className="cursor-pointer lg:hidden focus:outline-none" // focus:outline-none ដើម្បីលុបស្លាក outline នៅពេលចុច
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
       >
-        {isMenuOpen ? <X size={28} /> : <Menu size={28} />} {/* ប្តូរ icon តាមស្ថានភាព */}
+        {isMenuOpen ? <X size={28} /> : <Menu size={28} />} 
+        {/* ប្រើសម្រាប់បិទបើក menu បើ true បិត X បើ false បើ Menu */}
       </button>
 
       {/* Mobile Menu Overlay/Sidebar (នឹងបង្ហាញនៅពីលើខ្លឹមសារផ្សេងទៀត) */}
@@ -47,7 +49,7 @@ const Navbar = () => {
                   onClick={() => setIsMenuOpen(false)} // បិទ menu ពេលចុច link
                   className={({ isActive }) =>
                     `hover:text-gray-300 transition-colors duration-300 ${
-                      isActive ? "text-blue-500" : "text-white" // ជួសជុល "textwhi"
+                      isActive ? "text-blue-400" : "text-white" 
                     }`
                   }
                 >
@@ -60,14 +62,14 @@ const Navbar = () => {
       )}
 
       {/* Desktop Navigation */}
-      <ul className="hidden lg:flex gap-4 my-4"> {/* លាក់នៅលើ mobile, បង្ហាញនៅលើ desktop */}
+      <ul className="hidden lg:flex gap-4 my-4 font-semibold ">
         {links.map((link) => (
           <li key={link.label}>
             <NavLink
               to={link.path}
               className={({ isActive }) =>
-                `hover:text-gray-300 transition-colors duration-300 ${
-                  isActive ? "text-blue-500" : "text-white" // ជួសជុល "textwhi"
+                `hover:underline underline-offset-4  transition-colors duration-300 ${
+                  isActive ? "text-blue-400 " : "text-white "
                 }`
               }
             >
