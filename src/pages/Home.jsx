@@ -3,7 +3,7 @@ import Slider from "../components/Slider";
 
 const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6">
+    <div className="w-full  h-[100rem]">
       <Slider />
     </div>
   );

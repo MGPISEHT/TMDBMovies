@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // use for managing mobile menu state
 
   return (
-    <div className="flex justify-between items-center bg-gray-800 text-white  relative z-10"> 
+    <div className="flex justify-around p-5 items-center bg-gray-800 text-white  relative z-10"> 
       <Link to="/">
         <img src={logo} alt="logo" className=" md:w-15 md:h-15  w-10 h-10 my-4" />
       </Link>
