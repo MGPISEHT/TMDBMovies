@@ -10,7 +10,7 @@ import VNationalGeographic from "../assets/Videos/national-geographic.mp4";
 import VPixar from "../assets/Videos/pixar.mp4";
 import VMarvel from "../assets/Videos/marvel.mp4";
 
-export const ImagesAndVideos = [
+ const ImagesAndVideos = [
   {
     id: 1,
     image: IMarvel,
@@ -42,3 +42,5 @@ export const ImagesAndVideos = [
     video: VDisney,
   },
 ];
+
+export default ImagesAndVideos;
