@@ -4,11 +4,9 @@ import Navbar from "../components/Navbar";
 
 const RootLayout = () => {
   return (
-    <div className="bg-gray-800 min-h-screen">
-      <div>
-        <Navbar />
-        <Outlet />
-      </div>
+    <div>
+      <Navbar />
+      <Outlet />
     </div>
   );
 };

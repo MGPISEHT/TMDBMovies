@@ -1,21 +1,25 @@
 import axios from "axios";
 
 const movieBaseUrl = "https://api.themoviedb.org/3";
-const api_key = "992120e9e696feee647b0e5547df1c48";
 
-const movieByGenreBaseURL =
-  "https://api.themoviedb.org/3/discover/movie?api_key=992120e9e696feee647b0e5547df1c48";
+// const api_key = process.env.VITE_THE_MOVIE_DB_API_KEY; use for Node.js not vite
+const api_key = import.meta.env.VITE_THE_MOVIE_DB_API_KEY;
 
-// https://api.themoviedb.org/3/trending/all/day?api_key=992120e9e696feee647b0e5547df1c48
+// Check if the API key is loaded
+if(!api_key){
+  console.log("API key is not loaded. Please check your .env file ensure your using VITE_THE_MOVIE_DB_API_KEY in file.");
+}
+
 const getTrendingVideos = axios.get(
   movieBaseUrl + "/trending/all/day?api_key=" + api_key
 );
 
-const getMovieByGenreId = (id) =>
-  axios.get(movieByGenreBaseURL + "&with_genres=" + id);
-// this endpoint
+const movieByGenereBaseURL = movieBaseUrl + "/discover/movie?api_key=" + api_key;
+const getMovieByGenereId = (id) =>
+  axios.get(movieByGenereBaseURL + "&with_generes=" + id);
+// This endpoint now correctly uses the API key from .env
 
 export default {
   getTrendingVideos,
-  getMovieByGenreId,
+  getMovieByGenereId,
 };

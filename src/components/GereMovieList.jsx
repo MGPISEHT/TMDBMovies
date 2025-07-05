@@ -1,4 +1,4 @@
-import GeresList from "../Constants/GenresList.jsx";
+import GeresList from "../Constants/GeneresList.jsx";
 import MovieList from "./MovieList.jsx";
 const GereMovieList = () => {
   return (
