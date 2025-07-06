@@ -1,58 +1,46 @@
-# how to create toggle menu in React Js 
-import React, { useState } from "react"; 
-import { Menu, X } from "lucide-react"; 
+🎬 Movie Website Project
+This project is a movie Browse website built using ReactJS, Vite, TailwindCSS, and integrates with The Movie Database (TMDB) API.
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // use for managing mobile menu state
+🚀 How to Run the Project
+Please follow the steps below to install and run this project on your machine:
 
-  return (
-    
+1. Clone Project
+Open your Terminal or Command Prompt and type the following command:
 
-      {/* Button សម្រាប់ Mobile Menu */}
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)} 
-        // ប្រើសម្រាប់ toggle menu​ បើក​ (true = !isMenuOpen) និងបិទ (false = isMenuOpen)
-        className="cursor-pointer lg:hidden focus:outline-none" 
-        // focus:outline-none ដើម្បីលុបស្លាក outline នៅពេលចុច
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-      >
-        {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        {/* ប្រើសម្រាប់បិទបើក menu បើ true បិត X បើ false បើ Menu */}
-      </button>
+Bash
+git clone https://github.com/MGPISEHT/TMDBMovies.git
 
-      {/* Mobile Menu Overlay/Sidebar (នឹងបង្ហាញនៅពីលើខ្លឹមសារផ្សេងទៀត) */}
-      {isMenuOpen && (
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="absolute top-4 right-4 focus:outline-none"
-            aria-label="Close menu"
-          >
-            <X size={32} className="text-white" />
-          </button>
-          <ul className="flex flex-col gap-8 text-2xl">
-            {links.map((link) => (
-              <li key={link.label}>
-                <NavLink
-                  to={link.path}
-                  onClick={() => setIsMenuOpen(false)} // បិទ menu ពេលចុច link
-                  className={({ isActive }) =>
-                    `hover:text-gray-300 transition-colors duration-300 ${
-                      isActive ? "text-blue-500" : "text-white" // ជួសជុល "textwhi"
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+2. Open Project
+Open the project folder with your favorite code editor, such as VS Code or another IDE.
 
-    </div>
-  );
-};
+3. Install Dependencies
+Open Terminal in your project directory and install all dependencies:
 
-export default Navbar;
-# TMDBMovies
-# First Commit 
+Bash
+npm install
+# or if you use Yarn:
+# yarn install
+
+4. Run Project
+Once the dependencies are installed, use the following command to run the project in development mode:
+
+Bash
+npm run dev
+# or if you use Yarn:
+# yarn dev
+The project will run on http://localhost:5173 (or any other port shown in Terminal).
+
+🔑 Configuring API Key
+Important Note: You cannot use my own TMDB API Key. You must create a personal account on the TMDB website to get your API Key.
+
+Get Your API Key:
+Go to The Movie Database (TMDB) website.
+Create a new account or Login.
+Go to your account settings and request an API Key (v3).
+
+Create a .env File:
+In the root directory of your project, create a new file called .env. In this file, add your API Key in the following format:
+
+Code snippet
+VITE_THE_MOVIE_DB_API_KEY = "YOUR_ACTUAL_TMDB_API_KEY_HERE"
+Make sure to: Replace "YOUR_ACTUAL_TMDB_API_KEY_HERE" with the actual API Key you received from TMDB.

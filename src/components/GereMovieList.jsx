@@ -14,7 +14,8 @@ const GereMovieList = () => {
               {item.name}
               {/* បង្ហាញ MovieList ដែលទាក់ទងនឹង genreId 
                   ប្រើ genreId ដើម្បីទាញយកភាពយន្តដែលមាន genreId នេះ*/}
-              <MovieList genreId={item.id} />
+                  
+              <MovieList genreId={item.id} index_={index} />
             </div>
           )
       )}

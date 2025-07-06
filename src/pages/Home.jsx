@@ -4,7 +4,7 @@ import GereMovieList from "../components/GereMovieList";
 import ProductionHouse from "../components/ProductionHouse";
 const Home = () => {
   return (
-    <div className="w-full  h-[100rem] bg-gray-800 overflow-auto">
+    <div className="w-full bg-gray-800 overflow-auto">
       <Slider />
       <ProductionHouse/>
       <GereMovieList/>

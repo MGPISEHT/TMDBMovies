@@ -66,8 +66,7 @@ const Slider = () => {
           );
         })}
       </div>
-      {/* this animetion and logo  */}
-      
+
     </div>
   );
 };
