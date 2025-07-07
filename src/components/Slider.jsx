@@ -17,7 +17,7 @@ const Slider = () => {
   const handleLeftClick = () => {
     // ត្រូវប្រាកដថា elementRef.current មានតម្លៃមុនពេលប្រើ
     if (elementRef.current) {
-      elementRef.current.scrollLeft -= screenWidth - 110;
+       elementRef.current.scrollLeft -= screenWidth  ;
     }
   };
 
@@ -25,7 +25,7 @@ const Slider = () => {
   const handleRightClick = () => {
     // ត្រូវប្រាកដថា elementRef.current មានតម្លៃមុនពេលប្រើ
     if (elementRef.current) {
-      elementRef.current.scrollLeft += screenWidth - 110;
+      elementRef.current.scrollLeft += screenWidth ; 
     }
   };
   const getTrendingMovies = () => {
@@ -40,19 +40,17 @@ const Slider = () => {
     <div>
       <ChevronLeft
         size={40}
-        ref={elementRef}
         onClick={() => handleLeftClick()}
         className="text-white cursor-pointer hidden md:block absolute mx-8 mt-[20rem] left-0"
       />
       <ChevronRight
         onClick={() => handleRightClick()}
         size={40}
-        ref={elementRef}
         className="text-white cursor-pointer hidden md:block absolute mx-8 mt-[20rem] right-0"
       />
 
       <div
-        className="flex w-full px-5 overflow-hidden scroll-smooth"
+        className="flex w-full px-6 p-16 scroll-smooth overflow-auto md:no-scrollbar no-scrollbar"
         ref={elementRef}
       >
         {movieList.map((item, index) => {
