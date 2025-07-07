@@ -1,5 +1,5 @@
 
-# 🎬 TMDB Movie Browser
+# 🎬 TMDB Movie
 
 A modern, responsive movie browsing website built with **ReactJS**, **Vite**, **TailwindCSS**, and integrated with [The Movie Database (TMDB) API](https://www.themoviedb.org/).
 
