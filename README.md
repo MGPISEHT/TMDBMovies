@@ -1,14 +1,4 @@
 
-
----
-
-### ✅ Step-by-Step to Use in Your Project
-
-1. **Open your project folder** in your code editor (e.g., VS Code).
-2. **Locate or create** a file named `README.md` in the root of the project directory.
-3. **Copy all the content below**:
-
-````markdown
 # 🎬 TMDB Movie Browser
 
 A modern, responsive movie browsing website built with **ReactJS**, **Vite**, **TailwindCSS**, and integrated with [The Movie Database (TMDB) API](https://www.themoviedb.org/).
