@@ -7,6 +7,9 @@ const HrMovieCard = ({ movie }) => {
         alt={movie.title || movie.name}
         className="w-[110px] md:w-[260px] scroll-smooth duration-300 ease-in-out cursor-pointer rounded-lg shadow-lg hover:scale-110 hover:border-[2px]"
       />
+      <h1>welocme to error comde
+        
+      </h1>
     </>
   );
 };
