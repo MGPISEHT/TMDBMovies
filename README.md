@@ -52,10 +52,35 @@ Or using **Yarn**:
 ```bash
 yarn dev
 ```
-
 Your project will run at [http://localhost:5173](http://localhost:5173) (or another port shown in the terminal).
 
 ---
+
+### 4. Install Tailwind CSS in React + Vite
+If TailwindCSS is not yet installed, follow these steps:
+```bash
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Then, update your vite.config.js file:
+```
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+});
+```
+
+Next, in src/index.css, include the Tailwind directives:
+
+```
+@import "tailwindcss";
+```
 
 ## 🔑 TMDB API Configuration
 
