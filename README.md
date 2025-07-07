@@ -40,23 +40,7 @@ yarn install
 ```
 > **Note:** You need Install Tailwind CSS in React + Vite.
 
-### 3. Run the Development Server
-Using **npm**:
-
-```bash
-npm run dev
-```
-
-Or using **Yarn**:
-
-```bash
-yarn dev
-```
-Your project will run at [http://localhost:5173](http://localhost:5173) (or another port shown in the terminal).
-
----
-
-### 🎨 Install Tailwind CSS in React + Vite
+### 3. 🎨 Install Tailwind CSS in React + Vite
 If TailwindCSS is not yet installed, follow these steps:
 ```bash
 
@@ -81,6 +65,24 @@ Next, in src/index.css, include the Tailwind directives:
 ```
 @import "tailwindcss";
 ```
+
+### 4. 🏃‍➡️ Run the Development Server
+Using **npm**:
+
+```bash
+npm run dev
+```
+
+Or using **Yarn**:
+
+```bash
+yarn dev
+```
+Your project will run at [http://localhost:5173](http://localhost:5173) (or another port shown in the terminal).
+
+---
+
+
 
 ## 🔑 TMDB API Configuration
 
