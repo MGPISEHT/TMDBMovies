@@ -40,7 +40,7 @@ yarn install
 ```
 
 ### 3. Run the Development Server
-
+> **Note:** You need your own TMDB API key. The project does not include a shared API key.
 Using **npm**:
 
 ```bash
@@ -56,7 +56,7 @@ Your project will run at [http://localhost:5173](http://localhost:5173) (or anot
 
 ---
 
-###  Install Tailwind CSS in React + Vite
+### 🎨 Install Tailwind CSS in React + Vite
 If TailwindCSS is not yet installed, follow these steps:
 ```bash
 
@@ -121,24 +121,3 @@ TMDBMovies/
 └── vite.config.js
 ```
 
----
-
-## 📸 Screenshots (Optional)
-
-*Add screenshots or demo GIFs to showcase the UI here.*
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-```
-
-4. **Paste** the copied content into your `README.md` file.
-5. **Save** the file.
-
----
-
-Now your GitHub project will show a clean and professional `README.md` when someone views your repository! Let me know if you'd like help adding a live demo link or badges.
-```
