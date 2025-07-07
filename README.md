@@ -38,9 +38,9 @@ Or using **Yarn**:
 ```bash
 yarn install
 ```
+> **Note:** You need Install Tailwind CSS in React + Vite.
 
 ### 3. Run the Development Server
-> **Note:** You need your own TMDB API key. The project does not include a shared API key.
 Using **npm**:
 
 ```bash
