@@ -56,7 +56,7 @@ Your project will run at [http://localhost:5173](http://localhost:5173) (or anot
 
 ---
 
-### 4. Install Tailwind CSS in React + Vite
+###  Install Tailwind CSS in React + Vite
 If TailwindCSS is not yet installed, follow these steps:
 ```bash
 
